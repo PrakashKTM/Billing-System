@@ -1,0 +1,253 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+    background-color: antiquewhite;
+}
+
+body .title {
+    text-align: center;
+    padding: 20px;
+    font-weight: bolder;
+}
+
+body .bill {
+    text-align: center;
+    padding: 5px;
+}
+
+form {
+    font-weight: bold;
+    margin: 10px 50px;
+}
+
+form .receive {
+    margin-top: 10px;
+    padding: 30px 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 1px 0px 4px black;
+}
+
+.name-addr-pin {
+    display: flex;
+    padding: 10px 10px;
+    justify-content: space-evenly;
+}
+
+.name-addr-pin .name-input label {
+    padding: 10px;
+}
+
+.name-addr-pin .addr-input label {
+    padding: 10px;
+}
+
+.name-addr-pin .pin-input label {
+    padding: 10px;
+}
+
+.name-addr-pin input {
+    margin: 10px 0 0 10px;
+    padding: 5px 20px;
+    width: 350px;
+    border-radius: 5px;
+}
+
+.dist-state-gstin {
+    display: flex;
+    padding: 10px 10px;
+    justify-content: space-evenly;
+}
+
+.dist-state-gstin .rd label {
+    padding: 10px;
+}
+
+.dist-state-gstin .rs label {
+    padding: 10px;
+}
+
+.dist-state-gstin .rg label {
+    padding: 10px;
+}
+
+.dist-state-gstin input {
+    margin: 10px 0 0 10px;
+    padding: 5px 20px;
+    width: 350px;
+    border-radius: 5px;
+}
+
+.dist-state-gstin select {
+    margin: 10px 0 0 10px;
+    padding: 5px 20px;
+    width: 395px;
+    border-radius: 5px;
+}
+
+.contact {
+    display: flex;
+    padding: 10px 10px;
+}
+
+.contact .c1 {
+    padding: 0 40px;
+}
+
+.contact .c2 {
+    padding: 0 0 0 100px;
+}
+
+.contact .c1 label {
+    padding: 10px;
+}
+
+.contact .c2 label {
+    padding: 10px;
+}
+
+.contact .c1 input {
+    margin: 10px 0 0 10px;
+    padding: 5px 20px;
+    width: 250px;
+    border-radius: 5px;
+}
+
+.contact .c2 input {
+    margin: 10px 0 0 10px;
+    padding: 5px 20px;
+    width: 250px;
+    border-radius: 5px;
+}
+
+form .det-transport {
+    margin-top: 10px;
+    padding: 30px 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 1px 0px 4px black;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+form .det-transport label {
+    padding: 10px;
+}
+
+form .det-transport input {
+    margin: 10px 0 0 10px;
+    padding: 5px 20px;
+    width: 150px;
+    border-radius: 5px;
+}
+
+form .productlist {
+    margin-top: 10px;
+    padding: 30px 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 1px 0px 4px black;
+}
+
+form .det-product {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+form .det-product label {
+    padding: 10px;
+}
+
+form .det-product input {
+    margin: 10px 0 0 10px;
+    padding: 5px 20px;
+    width: 180px;
+    border-radius: 5px;
+}
+
+form .det-product select {
+    margin: 10px 0 0 10px;
+    padding: 5px 20px;
+    width: 300px;
+    border-radius: 5px;
+}
+
+.btn-add {
+
+    padding: 10px 30px;
+    margin: 19px 10px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bolder;
+    font-size: 15px;
+    background-color: rgb(27, 27, 246);
+    box-shadow: 1px 0px 5px black;
+}
+
+form .btn {
+    display: flex;
+    justify-content: end;
+    padding: 30px 50px;
+}
+
+form .btn input {
+    text-transform: capitalize;
+    padding: 10px 30px;
+    margin: 0 10px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bolder;
+    font-size: 15px;
+    background-color: rgb(9, 9, 13);
+    box-shadow: 0px 0px 5px black;
+}
+
+.product-added {
+    margin-top: 20px;
+    padding: 10px 50px;
+}
+
+.product-added h3 {
+    padding: 0 0 10px 0;
+}
+
+.product-added table {
+    border-collapse: collapse;
+    width: 100%;
+    box-shadow: 1px 0px 5px black;
+}
+
+.product-added table tr:first-child {
+    text-align: left;
+}
+
+.product-added table th {
+    background-color: rgb(40, 233, 79);
+    padding: 12px 30px;
+}
+
+.product-added table td {
+    padding: 8px 40px;
+}
+
+.product-added table tr td button {
+    background-color: red;
+    padding: 4px 20px;
+    border-radius: 5px;
+}
+
+.discount {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.discount input {
+    margin: 10px 0 0 10px;
+    padding: 5px 20px;
+    width: 180px;
+    border-radius: 5px;
+}

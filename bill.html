@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House of Threads</title>
+    <link rel="stylesheet" href="./bill.css">
+</head>
+
+<body onafterprint="redirecttoform()">
+    <div style="border-bottom:2px solid black;margin: 10px;">
+        <h4 class="tax">TAX INVOICE</h4>
+        <div class="gstin-state">
+            <h5>GSTIN NO : 33DJUPD2084K1ZW</h5>
+            <h5>STATE CODE : 33</h5>
+        </div>
+        <div class="header-details">
+            <div class="addr">
+                <img src="./IMG_20250515_204557_158.jpg" class="logo">
+                <div>
+                    <p>Manufactures Of Art Silk, Cotton Sarees</p>
+                    <address>
+                        106-E, K.K.Nagar, Edanganasalai,<br> <span class="elam">Elampillai, Salem-637502, Tamil Nadu
+                        </span>
+                    </address>
+                    <p style="margin-left: 10px;">E-Mail : houseofthreads@gmail.com</p>
+                </div>
+            </div>
+
+        </div>
+        <div class="gstin-contact">
+            <h5>Phone No 1 : 1234567891</h5>
+            <h5>Phone No 2 : 1234567891</h5>
+        </div>
+    </div>
+    <div class="section-2">
+        <div class="tocustomer">
+            <h5 class="billed">Details Of Receiver / Billed To :</h5>
+            <address>
+                <h4 id="name">M/s. VELAVAN STORES SILKS PVT.LTD </h4>
+                <p id="address">73,Usam Road Opp,Ranganathan Street,<br>
+                   T-Nagar,Chennai - 600017, Tamil Nadu</p>
+                <div>
+                    <p><span id="contact1">Contact : </span><span id="contact1no" style="font-weight: 100;">1234567891</span></p>
+                    <span style="padding: 0 7px;" id="c1c2">,</span>
+                    <p id="contact2p"><span id="contact2">Contact : </span><span id="contact2no" style="font-weight: 100;">1234567891</span></p>
+                </div>
+                <h5 id="gstin">GSTIN NO : 33DJUPD2084K1ZW</h5>
+                <h5 id="state">STATE CODE : 33</h5>
+            </address>
+        </div>
+        <div class="invo">
+            <table style="border-bottom: 2px solid black;padding-bottom: 5px;width:336px;">
+                <tr>
+                    <td class="td-third">Invoice No</td>
+                    <td>:</td>
+                    <td id="ino">000000</td>
+                </tr>
+                <tr>
+                    <td class="td-third">Date of Supply</td>
+                    <td>:</td>
+                    <td id="dos"><span id="gdate">00</span>/<span id="gmonth">00</span>/<span id="gyear">0000</span></td>
+                </tr>
+            </table>
+            <table style="width:336px;">
+                <tr>
+                    <td class="td-third">Transport</td>
+                    <td>:</td>
+                    <td id="transport"></td>
+                </tr>
+                <tr>
+                    <td class="td-third">E-way Bill No</td>
+                    <td>:</td>
+                    <td id="eway"></td>
+                </tr>
+                <tr>
+                    <td class="td-third">Ship No</td>
+                    <td>:</td>
+                    <td id="ship"></td>
+                </tr>
+                <tr>
+                    <td class="td-third">Freight</td>
+                    <td>:</td>
+                    <td id="freight"></td>
+                </tr>
+                <tr>
+                    <td class="td-third">No. of Packages</td>
+                    <td>:</td>
+                    <td id="nop"></td>
+                </tr>
+                <tr>
+                    <td class="td-third">Agent Name</td>
+                    <td>:</td>
+                    <td id="agent"></td>
+                </tr>
+            </table>
+
+
+        </div>
+    </div>
+    <div class="bank">
+        <div>
+            <p><span>Bank:</span> City Union Bank, Elampillai</p>
+        </div>
+        <div>
+            <p><span>IFSC:</span>CIUB0000189</p>
+        </div>
+        <div>
+            <p><span>A/C NO:</span>5109 0901 0173 041</p>
+        </div>
+
+    </div>
+    <section class="section-3">
+        <table>
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Description of Goods</th>\
+                    <th>HSN</th>
+                    <th>Pcs</th>
+                    <th>Mtrs</th>
+                    <th>Rate</th>
+                    <th>Amount ( ₹ ) </th>
+                </tr>
+            </thead>
+            <tbody id="tablebody">
+            </tbody>
+        </table>
+    </section>
+    <section class="section-4">
+        <table>
+            <tr>
+                <td style="width: 58.8%;" id="discountper">Discount 0.00 % </td>
+                <td><span style="padding: 0 10px;">(-)</span><span id="discoundval">0.0000</span></td>
+            </tr>
+            <tr>
+                <td style="font-weight: bolder;">Sub Total : </td>
+                <td style="font-weight: bolder;" id="subtoalvalue">00000</td>
+            </tr>
+            <tr>
+                <td>CGST 2.50 % </td>
+                <td><span style="padding: 0 10px;">(+)</span><span id="cgstval">00000</span></td>
+            </tr>
+            <tr>
+                <td>SGST 2.50 % </td>
+                <td><span style="padding: 0 10px;">(+)</span><span id="sgstval">00000</span></td>
+            </tr>
+            <tr>
+                <td>Total Tax : </td>
+                <td id="totaltax">00000</td>
+            </tr>
+            <tr>
+                <td style="font-weight: bolder;">Net Total : </td>
+                <td style="font-weight: bolder;" id="nettotal">000000</td>
+            </tr>
+        </table>
+    </section>
+    <section class="section-5">
+        <h4>Rupees :</h4>
+        <p id="rupees"></p>
+    </section>
+    <section class="section-6">
+        <div class="term">
+            <h4>Term and Conditions :</h4>
+            <p>1. Interest Will Be Changed @ 24 % on bill. if Payment Not Received Within 30 Days</p>
+            <p>2. Goods once sold Cannot Be Taken Back Under Any Circumstances</p>
+            <p>3. We Are Not Responsible For Any Loses Or Damege In Transit </p>
+            <p>4. All Disputes Subject To Salem Jurisdiction Only</p>
+        </div>
+        <div class="sign">
+            <h4 style="text-align: center;">For</h4>
+            <h3>HOUSE OF THREADS</h3>
+            <p>Authorised Signatory</p>
+        </div>
+    </section>
+
+
+    <!-- start script -->
+    <script src="./bill.js"></script>
+    <!-- end script -->
+</body>
+
+</html>

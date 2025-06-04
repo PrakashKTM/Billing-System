@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House of Threads</title>
+    <link rel="stylesheet" href="./bill_form_style.css">
+</head>
+
+<body>
+    <h1 class="title">HOUSE OF THREADS</h1>
+    <h3 class="bill">BILL INFORMATION</h3>
+    <form method="post" name="form1" id="form1">
+        <div class="det-receive">
+            <h2>Details of Receiver :</h2>
+            <div class="receive">
+                <div class="name-addr-pin">
+                    <div class="name-input">
+                        <label for="name">Receiver Name :</label><br>
+                        <input type="text" placeholder="Name" name="name" id="name" required oninput="namevalidation()">
+                        <p style="font-weight: 100;font-size: smaller;color: red;padding:2px 12px;" id="nameerr"></p>
+                    </div>
+                    <div class="addr-input">
+                        <label for="address">Receiver Address :</label><br>
+                        <input type="text" placeholder="Address" name="address" id="address" required
+                            oninput="addressvalidation()">
+                        <p style="font-weight: 100;font-size: smaller;color: red;padding:2px 12px;" id="addresserr"></p>
+                    </div>
+                    <div class="pin-input">
+                        <label for="pin">Receiver Pin code :</label><br>
+                        <input type="number" placeholder="Pin code" id="pin" name="pin" required
+                            oninput="pinvalidation()">
+                        <p style="font-weight: 100;font-size: smaller;color: red;padding:2px 12px;" id="pinerr"></p>
+                    </div>
+                </div>
+                <div class="dist-state-gstin">
+                    <div class="rd">
+                        <label for="district">Receiver District :</label><br>
+                        <input type="text" placeholder="District" id="district" name="district" required
+                            oninput="districtvalidation()">
+                        <p style="font-weight: 100;font-size: smaller;color: red;padding:2px 12px;" id="districterr">
+                        </p>
+                    </div>
+                    <div class="rs">
+                        <label>Receiver State :</label><br>
+                        <select id="state" required style="color: green;">
+                            <option value="33 Tamil Nadu">Tamil Nadu</option>
+                        </select>
+                    </div>
+                    <div class="rg">
+                        <label for="gstin">Receiver GSTIN NO :</label><br>
+                        <input type="text" placeholder="GSTIN NO" id="gstin" name="gstin" required
+                            oninput="gstinvalidation()">
+                        <p style="font-weight: 100;font-size: smaller;color: red;padding:2px 12px;" id="gstinerr"></p>
+                    </div>
+                </div>
+                <div class="contact">
+                    <div class="c1">
+                        <label for="contact1">Receiver Contact NO 1 :</label><br>
+                        <input type="number" placeholder="Contact" id="contact1" name="contact1" required
+                            oninput="contact1validation()">
+                        <p style="font-weight: 100;font-size: smaller;color: red;padding:2px 12px;" id="contact1err">
+                        </p>
+                    </div>
+                    <div class="c2">
+                        <label for="contact2">Receiver Contact NO 2 :</label><br>
+                        <input type="number" placeholder="Contact" id="contact2" name="contact2"
+                            oninput="contact2validation()">
+                        <p style="font-weight: 100;font-size: smaller;color: red;padding:2px 12px;" id="contact2err">
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h2 style="margin-top: 20px;">Details of Transport :</h2>
+        <div class="det-transport">
+            <div class="tt">
+                <label for="transport">Transport :</label><br>
+                <input type="text" placeholder="Transport" id="transport" name="transport">
+            </div>
+            <div class="te">
+                <label for="eway">E-way Bill No :</label><br>
+                <input type="text" placeholder="E-way Bill No" id="eway" name="eway">
+            </div>
+            <div class="ts">
+                <label for="ship">Ship No :</label><br>
+                <input type="text" placeholder="Ship No" id="ship" name="ship">
+            </div>
+            <div class="tf">
+                <label for="freight">Freight :</label><br>
+                <input type="text" placeholder="Freight" id="freight" name="freight">
+            </div>
+            <div class="tn">
+                <label for="nop">No. of Packages :</label><br>
+                <input type="number" placeholder="No. of Packages" id="nop" name="nop">
+            </div>
+            <div class="ta">
+                <label for="agent">Agent Name :</label><br>
+                <input type="text" placeholder="Agent Name" id="agent" name="agent">
+            </div>
+        </div>
+        <h2 style="margin-top: 20px;">Details of Product :</h2>
+        <div class="productlist">
+            <div class="det-product">
+                <div>
+                    <label>Product Name :</label><br>
+                    <select id="product" style="color: green;" required>
+                        <option>sample product</option>
+                        <option>original product</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="pcs">Pcs</label><br>
+                    <input type="number" placeholder="Pcs" id="pcs">
+                </div>
+                <div>
+                    <label for="mtrs">Mtrs</label><br>
+                    <input type="number" placeholder="Mtrs" id="mtrs">
+                </div>
+                <div>
+                    <label for="rate">Rate</label><br>
+                    <input type="number" placeholder="Rate" id="rate">
+                </div>
+                <div>
+                    <button type="button" class="btn-add" onclick="add()">Add</button>
+                </div>
+
+            </div>
+            <div class="product-added">
+                <h3 id="prolength">Total Products : </h3>
+                <table id="producttable">
+                    <colgroup>
+                        <col span="1" style="width: 520px;">
+                        <col span="4" style="width: 200px;">
+                    </colgroup>
+                    <tr>
+                        <th>Description of Goods</th>
+                        <th>Pcs</th>
+                        <th>Mtrs</th>
+                        <th>Rate</th>
+                        <th>Remove Option</th>
+                    </tr>
+                </table>
+                <div class="discount">
+                    <label for="discount">Discount</label><br>
+                    <input type="tel" placeholder="Discount" name="discount" id="discount"
+                        oninput="discountvalidation()" required>
+                    <p style="font-weight: 100;font-size: smaller;color: red;padding:2px 12px;" id="discounterr"></p>
+                </div>
+            </div>
+        </div>
+        <div class="btn">
+            <input type="reset" class="btn-rst">
+            <input type="submit" class="btn-sum" id="btn-sum">
+        </div>
+    </form>
+    <!-- script start -->
+    <script src="./bill_form.js"></script>
+</body>
+
+</html>
